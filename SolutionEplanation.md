@@ -18,9 +18,11 @@ Putting it all together, the purpose of this code is to create a string (spaceLi
 
 ## Task 1 Solution
 
+```
 var allMonths = finances.map(entry => entry[0].split('-')[0]);
 var totalMonths = allMonths.length;
 console.log("Total number of months: " + totalMonths);
+```
 
 I employed the concatenation method to join strings and variables in my code. Nevertheless, I find it more preferable to utilize the "Template literals" approach.
 
