@@ -35,7 +35,7 @@ This preference arises because it eliminates the need for the "+" operator and p
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
 
-## Task 2 Solution
+## 2️⃣ Net Total Amount of Profit/Losses - Solution:
 
 ```
 var netTotal = finances.reduce((total, entry) => total + entry[1], 0);
