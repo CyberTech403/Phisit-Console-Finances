@@ -119,18 +119,25 @@ console.log("Total amount of Profit/Losses: " + formattedNetTotal);
 
 // Task 3 Solution:
 
+var totalChange = 0;
 
+for (var i = 1; i < finances.length; i++){totalChange += finances[i][1] - finances[i - 1][1];}
 
+var averageChange = (totalChange / (finances.length - 1)).toFixed(2);
 
-
+console.log('Average Change: ' + averageChange);
 
 
 
 /*
 
-Preferably, I would enhance the code readability by employing the Template Literals method for formatting my console.log statements like this: 
+ONLY for this challenge I have employed the concatenation method to join strings and variables in my code. Nevertheless, I find it more preferable to utilize the "Template literals" approach.
 
-console.log(`
+This preference is more effective because it eliminate the need for the "+" operator and parenthesss. Thus, enchaning my code readability and significantly speeding up the typing process (especially with larger code).
+
+For example: 
+
+console.log (`
 
 ${titleName}\n
 ${spaceLine}\n
@@ -138,5 +145,7 @@ Total number of months:${totalMonths}\n
 Total amount of Profit/Losses ${formattedNetTotal}
 
 `);
+
+Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
 */

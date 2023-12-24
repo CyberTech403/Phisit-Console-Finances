@@ -24,18 +24,6 @@ var totalMonths = allMonths.length;
 console.log("Total number of months: " + totalMonths);
 ```
 
-I employed the concatenation method to join strings and variables in my code. Nevertheless, I find it more preferable to utilize the "Template literals" approach.
-
-For example:
-
-```
-console.log(`Total number of months: ${totalMonths}`);
-```
-
-This preference arises because it eliminates the need for the "+" operator and parentheses. Thus,enhancing code readability and significantly speeding up the typing process.
-
-Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-
 
 ## 2️⃣ Net Total Amount of Profit/Losses - Solution:
 
@@ -74,3 +62,20 @@ This method of the Intl.NumberFormat object takes the netTotal variable and form
 This part uses the replace method to remove commas from the formatted number. The regular expression /,/g matches all occurrences of commas in the string, and '' is the replacement, effectively removing the commas.
 
 So, the overall purpose of this code is to format the netTotal variable as a currency in USD without any decimal places, and then remove any commas, resulting in a string: "$38382578".
+
+## 3️⃣ Average Changes in Profit/Losses - Solution: 
+
+```
+var totalChange = 0;
+
+for (var i = 1; i < finances.length; i++) {
+  totalChange += finances[i][1] - finances[i - 1][1];
+}
+
+var averageChange = (totalChange / (finances.length - 1)).toFixed(2);
+
+console.log('Average Change: ' + averageChange);
+```
+
+
+
