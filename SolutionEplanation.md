@@ -51,12 +51,23 @@ console.log("Total amount of Profit/Losses: " + formattedNetTotal);
 
 ```
 
-New Intl.NumberFormat('en-US', {...}): This part creates a new instance of the Intl.NumberFormat object, which is an internationalization object that helps you format numbers according to the specified locale and options. In this case, it's set to the English (United States) locale ('en-US').
+New Intl.NumberFormat('en-US', {...}): 
 
-{ style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }: These are the options passed to the Intl.NumberFormat constructor. It specifies that the number should be formatted as currency ('style: 'currency'') in US dollars ('currency: 'USD''). Additionally, minimumFractionDigits and maximumFractionDigits are set to 0, meaning no decimal places will be shown.
+This part creates a new instance of the Intl.NumberFormat object, which is an internationalization object that helps you format numbers according to the specified locale and options. In this case, it's set to the English (United States) locale ('en-US').
 
-.format(netTotal): This method of the Intl.NumberFormat object takes the netTotal variable and formats it according to the specified options. This will add commas for thousands separators and format the number as a currency.
+{ style: 'currency', 
+currency: 'USD', 
+minimumFractionDigits: 0, 
+maximumFractionDigits: 0 }: 
 
-.replace(/,/g, ''): This part uses the replace method to remove commas from the formatted number. The regular expression /,/g matches all occurrences of commas in the string, and '' is the replacement, effectively removing the commas.
+These are the options passed to the Intl.NumberFormat constructor. It specifies that the number should be formatted as currency ('style: 'currency'') in US dollars ('currency: 'USD''). Additionally, minimumFractionDigits and maximumFractionDigits are set to 0, meaning no decimal places will be shown.
 
-So, the overall purpose of this code is to format the netTotal variable as a currency in USD without any decimal places, and then remove any commas, resulting in a string like "$38382578".
+.format(netTotal): 
+
+This method of the Intl.NumberFormat object takes the netTotal variable and formats it according to the specified options. This will add commas for thousands separators and format the number as a currency.
+
+.replace(/,/g, ''): 
+
+This part uses the replace method to remove commas from the formatted number. The regular expression /,/g matches all occurrences of commas in the string, and '' is the replacement, effectively removing the commas.
+
+So, the overall purpose of this code is to format the netTotal variable as a currency in USD without any decimal places, and then remove any commas, resulting in a string: "$38382578".
