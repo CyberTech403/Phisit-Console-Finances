@@ -16,7 +16,7 @@ const spaceLine = ...;: This declares a constant variable named spaceLine and as
 
 Putting it all together, the purpose of this code is to create a string (spaceLine) consisting of hyphens ("-") repeated a number of times equal to the length of the titleName string. This is often used to create a separator line with a length matching the length of the title when printed to the console. For example, if titleName is "Financial Analysis" with a length of 17 characters, then spaceLine will be "-----------------".
 
-## Task 1 Solution
+## 1️⃣ Total Number of Months - Solution:
 
 ```
 var allMonths = finances.map(entry => entry[0].split('-')[0]);
