@@ -92,3 +92,13 @@ const spaceLine = "-".repeat(16);
 
 console.log(titleName);
 console.log(spaceLine);
+
+
+// Task 1 Solution:
+
+var allMonths = finances.map(entry => entry[0].split('-')[0]);
+
+var totalMonths = allMonths.length;
+
+console.log("Total number of months: " + totalMonths);
+
