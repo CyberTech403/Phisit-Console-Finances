@@ -26,22 +26,8 @@ var totalMonths = allMonths.length;
 console.log("Total number of months: " + totalMonths);
 ```
 
-<<<<<<< HEAD:SolutionEplanation.md
-=======
-I employed the concatenation method to join strings and variables in my code. Nevertheless, I find it more preferable to utilize the "Template literals" approach.
-
-For example:
-
-```
-console.log(`Total number of months: ${totalMonths}`);
-```
-
-This preference arises because it eliminates the need for the "+" operator and parentheses. Thus,enhancing code readability and significantly speeding up the typing process.
-
-Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-
 ##
->>>>>>> eb167fc3b358c5053750760c44291ffc1f4741be:SolutionExplanation.md
+
 
 ## 2️⃣ Net Total Amount of Profit/Losses - Solution:
 
