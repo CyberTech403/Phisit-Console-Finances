@@ -87,6 +87,8 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+// Task Title Solution: 
+
 const titleName = "Financial Analysis";
 const spaceLine = "-".repeat(16);
 
@@ -102,3 +104,15 @@ var totalMonths = allMonths.length;
 
 console.log("Total number of months: " + totalMonths);
 
+// Task 2 Solution: 
+
+var netTotal = finances.reduce((total, entry) => total + entry[1], 0);
+
+var formattedNetTotal = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0
+}).format(netTotal).replace(/,/g, '');
+
+console.log("Total amount of Profit/Losses: " + formattedNetTotal);
