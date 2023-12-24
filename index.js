@@ -128,12 +128,18 @@ var averageChange = (totalChange / (finances.length - 1)).toFixed(2);
 console.log('Average Change: ' + averageChange);
 
 
-
 /*
 
-ONLY for this challenge I have employed the concatenation method to join strings and variables in my code. Nevertheless, I find it more preferable to utilize the "Template literals" approach.
+ONLY for this challenge I have employed the concatenation method 
+to join strings and variables in my code. 
+Nevertheless, I find it more preferable to utilize
+the "Template literals" approach.
 
-This preference is more effective because it eliminate the need for the "+" operator and parenthesss. Thus, enchaning my code readability and significantly speeding up the typing process (especially with larger code).
+This preference is more effective because 
+it eliminate the need for the "+" operator and parenthesss. 
+
+Thus, enchaning my code readability and 
+significantly speeding up the typing process (especially with larger code).
 
 For example: 
 
