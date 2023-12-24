@@ -28,7 +28,9 @@ I employed the concatenation method to join strings and variables in my code. Ne
 
 For example:
 
-` Total amount of Profit/Losses: ${netTotal} `
+```
+console.log(`Total number of months: ${totalMonths}`);
+```
 
 This preference arises because it eliminates the need for the "+" operator and parentheses. Thus,enhancing code readability and significantly speeding up the typing process.
 
