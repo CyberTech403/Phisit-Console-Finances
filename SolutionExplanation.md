@@ -1,4 +1,4 @@
-## Title - Solution:
+## 💡 Title - Solution:
 
 ```
 const titleName = "Financial Analysis";
@@ -16,6 +16,8 @@ const spaceLine = ...;: This declares a constant variable named spaceLine and as
 
 Putting it all together, the purpose of this code is to create a string (spaceLine) consisting of hyphens ("-") repeated a number of times equal to the length of the titleName string. This is often used to create a separator line with a length matching the length of the title when printed to the console. For example, if titleName is "Financial Analysis" with a length of 17 characters, then spaceLine will be "-----------------".
 
+##
+
 ## 1️⃣ Total Number of Months - Solution:
 
 ```
@@ -24,6 +26,22 @@ var totalMonths = allMonths.length;
 console.log("Total number of months: " + totalMonths);
 ```
 
+<<<<<<< HEAD:SolutionEplanation.md
+=======
+I employed the concatenation method to join strings and variables in my code. Nevertheless, I find it more preferable to utilize the "Template literals" approach.
+
+For example:
+
+```
+console.log(`Total number of months: ${totalMonths}`);
+```
+
+This preference arises because it eliminates the need for the "+" operator and parentheses. Thus,enhancing code readability and significantly speeding up the typing process.
+
+Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+##
+>>>>>>> eb167fc3b358c5053750760c44291ffc1f4741be:SolutionExplanation.md
 
 ## 2️⃣ Net Total Amount of Profit/Losses - Solution:
 
