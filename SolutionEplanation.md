@@ -53,22 +53,23 @@ console.log("Total amount of Profit/Losses: " + formattedNetTotal);
 
 ```
 
-New Intl.NumberFormat('en-US', {...}): 
+` New Intl.NumberFormat('en-US', {...}): `
 
-This part creates a new instance of the Intl.NumberFormat object, which is an internationalization object that helps you format numbers according to the specified locale and options. In this case, it's set to the English (United States) locale ('en-US').
+This part creates a new instance of the Intl.NumberFormat object, which is an internationalization object that helps you format numbers according to the specified locale and options. In this case, it's set to the English (United States) locale ('en-US'). 
 
+`
 { style: 'currency', 
 currency: 'USD', 
 minimumFractionDigits: 0, 
-maximumFractionDigits: 0 }: 
+maximumFractionDigits: 0 }: ` 
 
 These are the options passed to the Intl.NumberFormat constructor. It specifies that the number should be formatted as currency ('style: 'currency'') in US dollars ('currency: 'USD''). Additionally, minimumFractionDigits and maximumFractionDigits are set to 0, meaning no decimal places will be shown.
 
-.format(netTotal): 
+` .format(netTotal): `  
 
 This method of the Intl.NumberFormat object takes the netTotal variable and formats it according to the specified options. This will add commas for thousands separators and format the number as a currency.
 
-.replace(/,/g, ''): 
+` .replace(/,/g, ''): `
 
 This part uses the replace method to remove commas from the formatted number. The regular expression /,/g matches all occurrences of commas in the string, and '' is the replacement, effectively removing the commas.
 
