@@ -1,3 +1,5 @@
+//Startr code 
+
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -95,11 +97,9 @@ const spaceLine = "-".repeat(16);
 console.log(titleName);
 console.log(spaceLine);
 
-
 // Task 1 Solution:
 
 var allMonths = finances.map(entry => entry[0].split('-')[0]);
-
 var totalMonths = allMonths.length;
 
 console.log("Total number of months: " + totalMonths);
@@ -116,3 +116,27 @@ var formattedNetTotal = new Intl.NumberFormat('en-US', {
 }).format(netTotal).replace(/,/g, '');
 
 console.log("Total amount of Profit/Losses: " + formattedNetTotal);
+
+// Task 3 Solution:
+
+
+
+
+
+
+
+
+/*
+
+Preferably, I would enhance the code readability by employing the Template Literals method for formatting my console.log statements like this: 
+
+console.log(`
+
+${titleName}\n
+${spaceLine}\n
+Total number of months:${totalMonths}\n
+Total amount of Profit/Losses ${formattedNetTotal}
+
+`);
+
+*/
