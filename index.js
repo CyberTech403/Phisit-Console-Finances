@@ -86,3 +86,9 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+const titleName = "Financial Analysis";
+const spaceLine = "-".repeat(16);
+
+console.log(titleName);
+console.log(spaceLine);
