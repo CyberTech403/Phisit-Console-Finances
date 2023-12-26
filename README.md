@@ -22,7 +22,6 @@ Identify the month with the most significant increase in Profit/Losses, specifyi
 ### 5️⃣ Greatest Decrease in Profit/Losses:
 Locate the month exhibiting the most substantial decrease in Profit/Losses, highlighting both the date and the associated difference in amounts. Understanding the periods of significant losses is imperative for strategic financial planning.
 
-##
 
 ## Conclusion: 
 
