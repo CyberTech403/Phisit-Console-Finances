@@ -1,6 +1,4 @@
-//Startr code 
-
-var finances = [
+const finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
   ['Mar-2010', 322013],
@@ -91,66 +89,105 @@ var finances = [
 
 // Task Title Solution: 
 
-const titleName = "Financial Analysis";
-const spaceLine = "-".repeat(16);
+const titleName = 'Financial Analysis';
+const spaceLine = '-'.repeat(16);
 
-console.log(titleName);
-console.log(spaceLine);
+console.log(`${titleName} \n${spaceLine} `);
 
-// Task 1 Solution:
+// Task 1 Solution: Total Number of Months:
 
-var allMonths = finances.map(entry => entry[0].split('-')[0]);
-var totalMonths = allMonths.length;
+let allMonths = finances.map(entry => entry[0].split('-')[0]);
+let totalMonths = allMonths.length;
 
-console.log("Total number of months: " + totalMonths);
+console.log(`Total number of months: ${totalMonths}`);
 
-// Task 2 Solution: 
+// Task 2 Solution: Net Total Amount of Profit/Losses:
 
-var netTotal = finances.reduce((total, entry) => total + entry[1], 0);
+const netTotal = finances.reduce((total, entry) => total + entry[1], 0);
 
-var formattedNetTotal = new Intl.NumberFormat('en-US', {
+let formattedNetTotal = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
   minimumFractionDigits: 0,
   maximumFractionDigits: 0
 }).format(netTotal).replace(/,/g, '');
 
-console.log("Total amount of Profit/Losses: " + formattedNetTotal);
+console.log(`Total: ${formattedNetTotal}`);
 
-// Task 3 Solution:
+// Task 3 Solution: Average Changes in Profit/Losses:
 
-var totalChange = 0;
+let totalChange = 0;
 
-for (var i = 1; i < finances.length; i++){totalChange += finances[i][1] - finances[i - 1][1];}
+for (let i = 1; i < finances.length; i++){totalChange += finances[i][1] - finances[i - 1][1];}
 
-var averageChange = (totalChange / (finances.length - 1)).toFixed(2);
+const averageChange = (totalChange / (finances.length - 1)).toFixed(2);
 
-console.log('Average Change: ' + averageChange);
+console.log(`Average Change: ${averageChange}`);
+
+
+// Task 4 Solution: Greatest Increase in Profit/Losses:
+
+const searchGreatestIncrease = finances => {
+  const [date, increaseDifference] = finances.slice(1).reduce(
+    ([maxDate, maxDiff], [currDate, currAmount], i) => 
+      (currAmount - finances[i][1] > maxDiff) ? 
+      [currDate, currAmount - finances[i][1]] : [maxDate, maxDiff],
+    ['', 0]
+  );
+  return { date, increaseDifference };
+};
+
+const { date, increaseDifference } = searchGreatestIncrease(finances);
+
+let increaseFormat = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0
+}).format(increaseDifference).replace(/,/g, '');
+
+console.log(`Greatest Increase in Profit/Losses: ${date} ${increaseFormat}`);
+
+
+// Task 5 Solution: Greatest Decrease in Profit/Losses:
+
+const searchGreatestDecrease = finances => {
+  const greatestDecrease = finances.slice(1).reduce((result, [currentDate, currentAmount], i) => {
+    const previousAmount = finances[i][1];
+    const decreaseDifference = currentAmount - previousAmount;
+
+    if (decreaseDifference < result.decreaseDifference) {
+      result.date = currentDate;
+      result.decreaseDifference = decreaseDifference;
+    }
+
+    return result;
+  }, { date: '', decreaseDifference: Infinity });
+
+  return greatestDecrease;
+};
+
+const result = searchGreatestDecrease(finances);
+
+let decreaseFormat = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0
+}).format(result.decreaseDifference).replace(/,/g, '');
+
+console.log(`Greatest Decrease in Profit/Losses: ${result.date} (${decreaseFormat})`);
 
 
 /*
 
-ONLY for this challenge I have employed the concatenation method 
-to join strings and variables in my code. 
-Nevertheless, I find it more preferable to utilize
-the "Template literals" approach.
+NOTES:
 
-This preference is more effective because 
-it eliminate the need for the "+" operator and parenthesss. 
+I find it more preferable to utilize the "Template literals" instead of using concatenation.
 
-Thus, enchaning my code readability and 
-significantly speeding up the typing process (especially with larger code).
+This preference is more effective because it eliminate the need for the "+" operator and parenthesss. 
 
-For example: 
-
-console.log (`
-
-${titleName}\n
-${spaceLine}\n
-Total number of months:${totalMonths}\n
-Total amount of Profit/Losses ${formattedNetTotal}
-
-`);
+Thus, enchaning my code readability and significantly speeding up the typing process (especially with larger code).
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
