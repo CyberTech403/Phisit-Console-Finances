@@ -1,6 +1,6 @@
 # Console-Finances Challenge: 
 
-## Project Preview
+## Preview
 
 <p align="center">
 https://cybertech403.github.io/Phisit-Console-Finances/
