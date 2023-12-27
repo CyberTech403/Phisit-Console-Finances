@@ -1,5 +1,10 @@
 # Console-Finances Challenge: 
 
+## Project Preview
+
+
+##
+
 ## Summary 📋
 
 In this challenge, I've been tasked with utilizing my JavaScript skills to address a real-world scenario involving financial data analysis. Using the provided financial dataset, located in the starter/index.js file.
