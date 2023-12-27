@@ -2,6 +2,10 @@
 
 ## Project Preview
 
+##
+
+<p align="center">
+<img src="https://github.com/CyberTech403/Phisit-Console-Finances/blob/main/Assets/images/screenshot-console-log.png" width="90%" >
 
 ##
 
