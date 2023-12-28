@@ -146,7 +146,7 @@ let increaseFormat = new Intl.NumberFormat('en-US', {
   maximumFractionDigits: 0
 }).format(increaseDifference).replace(/,/g, '');
 
-console.log(`Greatest Increase in Profit/Losses: ${date} ${increaseFormat}`);
+console.log(`Greatest Increase in Profit/Losses: ${date} (${increaseFormat})`);
 
 
 // Task 5 Solution: Greatest Decrease in Profit/Losses:
